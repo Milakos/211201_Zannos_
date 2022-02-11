@@ -96,11 +96,11 @@
 
 ## Πρακτικό μέρος
 
-   Στο πρακτικό μέρος της εργασίας έγινε η προσπάθεια ψηφιακής αναπράστασης της συναισθησίας ως πάθηση με έμφαση στην σχέση ήχου, χρωμάτων-σχημάτων. Για το ακουστικό μέρος χρησιμοποιήθηκε το προγραμματιστικό περιβάλλον μουσικής σύνθεσης SuperCollider. Δημιουργήθηκαν δύο διαφορετικά SynthDef. Οι παράμετροι που διαχειρίζονται είναι η περιβάλλουσα με την γεννήτρια EnvGen η οποία καθορίζει τις μεταβλητές attack, sustain release. Η γεννήτρια ήχου τύπου pulse καθορίζει την συχνότητα η οποία διαμορφώνεται θόρυβο χαμηλών συχνοτήτων  και προσθέτει ένα μικρό ξεκούρδισμα. Δημιουργείτε ένα Band Pass Filter όπου καθορίζουμε τις ελάχιστες και μέγιστες τιμές των συχνοτικών άκρων του BPF καθώς και την τιμή του Q (καμπάνας). Τέλος προστίθεται ο παράγοντας της στερεοφωνίας με το Pan2 και καταχωρείτε στον server για χρήση.
+   Στο πρακτικό μέρος της εργασίας έγινε η προσπάθεια ψηφιακής αναπαράστασης της συναισθησίας με έμφαση στην σχέση ήχου και χρωμάτων-σχημάτων. Για το ακουστικό μέρος χρησιμοποιήθηκε το προγραμματιστικό περιβάλλον μουσικής σύνθεσης SuperCollider. Δημιουργήθηκαν δύο διαφορετικά SynthDef. Οι παράμετροι που διαχειρίζονται είναι η περιβάλλουσες με την γεννήτρια EnvGen η οποία καθορίζει τις μεταβλητές attack, sustain release. Η γεννήτρια ήχου τύπου pulse καθορίζει την συχνότητα, η οποία διαμορφώνει θόρυβο χαμηλών συχνοτήτων και προσθέτει ένα μικρό ξεκούρδισμα. Δημιουργείται ένα Band Pass Filter όπου καθορίζει τις ελάχιστες και μέγιστες τιμές των συχνοτικών ορίων του BPF καθώς και την τιμή του Q (καμπάνας). Τέλος, προστίθεται ο παράγοντας της στερεοφωνίας με το Pan2 και καταχωρείτε στον server για χρήση.
 
-Με την ίδια λογική καθορίζουμε στην συνέχεια και το Reverb, όπου διαχειριζόμαστε τιμές όπως ο χρόνος αντήχησης, η ένταση, ένα low pass filter, το predelay, καθώς και την αναλογία του καθαρού σήματος με το σήμα που παιρνάει απο το εφέ (dry/wet). Το Reverb το προσθέτουμε σε ένα Bus. 
+Με την ίδια λογική καθορίζουμε στην συνέχεια και το Reverb, όπου διαχειριζόμαστε τιμές όπως ο χρόνος αντήχησης, η ένταση, ένα low pass filter, το predelay, καθώς και την αναλογία του καθαρού σήματος με το σήμα που περνάει από το εφέ (dry/wet). Το Reverb το εισέρχεται σε ένα Bus για μελλοντική χρήση. 
 
-Στην συνέχεια δημιουργούνται τρία διαφορετικά όργανα τύπου ακολουθιών Pbind και ορίζουμε τις μεταβλητές συχνότητας με τυχαίους αριθμους κάθε φόρα με τις τιμές που ορίσαμε στην Prand. Οι μεταβλητές διάρκειας νότας επίης ορίζονται με τον ίδιο τρόπο. Οι μεταβλητές ξεκουρδίσματος ορίζονται απο τυχαίους αριθμούς μέσα στο φάσμα αριθμών που ορίζουμε. Επίσης ορίζουμε το συχνοτικό φάσμα και τις καμπάνες του LPF, της μεταβλητές περιβάλλουσας attack, sustain, release, η ένταση, η στερεοφωνική εικόνα, και η ένωση με το εφέ προσομοίωσης δωματίου (Reverb). Τέλος δημιουργείτε μια ακολουθία συνάρτησης Pfunc, όπου παίρνει τις μεταβλητές που ορίσαμε και τις στέλνει στην Processing με το πρωτοκολλο OSC.  
+Στην συνέχεια, δημιουργούνται τρία διαφορετικά όργανα τύπου ακολουθιών Pbind και ορίζονται οι μεταβλητές συχνότητας με τυχαίους αριθμους κάθε φόρα με τις τιμές που ορίσαμε στην Prand. Οι μεταβλητές διάρκειας νότας επίσης ορίζονται με τον ίδιο τρόπο. Οι μεταβλητές ξεκουρδίσματος ορίζονται από τυχαίους αριθμούς μέσα στο φάσμα αριθμών που ορίζεται. Επίσης ορίζεται το συχνοτικό φάσμα και οι καμπάνες του LPF, οι μεταβλητές περιβάλλουσας attack, sustain, release, η ένταση, η στερεοφωνική εικόνα, και η ένωση με το εφέ προσομοίωσης δωματίου (Reverb). Τέλος δημιουργείται μια ακολουθία συνάρτησης Pfunc, η οποία παίρνει τις μεταβλητές που ορίσαμε και τις στέλνει στην Processing με το πρωτόκολλο OSC.  
 
 Για το οπτικό μέρος τςη εργασίας χρησιμοποιήθηκε το περιβάλλον προγραμματισμού Processing όπου διαχειρίζεται ένα έργο του Wasilly Kadinsky με τεχνικές pixel rasterization. Το οπτικό αποτέλεσμα είναι μια τρισδιάστατη αποδόμηση των δύο διαστάσεων έργο του Kadinsky. 
 
@@ -369,27 +369,25 @@ void oscEvent(OscMessage theOscMessage)
 
 # Βιβλιογραφία
 
-* Κουτσουράκη, Ε., Αναστασιάδης, Ι., Μπαλογιάννης, Σ.Ι. (2008), Το φαινόμενο της συναισθησίας. Μια ανασκόπηση, Εγκέφαλος, (τόμος 45) Νο 1.  http://www.encephalos.gr/full/45-1-02g.htm 
+* Κουτσουράκη, Ε., Αναστασιάδης, Ι., Μπαλογιάννης, Σ.Ι. (2008), “Το φαινόμενο της συναισθησίας. Μια ανασκόπηση.”, Εγκέφαλος, (τόμος 45) Νο 1.  http://www.encephalos.gr/full/45-1-02g.htm 
 
-* Ελένη Καλπακίδη, Συναισθησία και τέχνη του φωτός: εικαστικές εφαρμογές φωτισμού και εγκαταστάσεις φωτός που προσομοιώνουν το αντιληπτικό φαινόμενο της συναισθησίας (2018) https://apothesis.eap.gr/handle/repo/40547 
+* Καλπακίδη, Ελένη.  “Συναισθησία και τέχνη του φωτός: εικαστικές εφαρμογές φωτισμού και εγκαταστάσεις φωτός που προσομοιώνουν το αντιληπτικό φαινόμενο της συναισθησίας.” Σεπτέμβριος 30, 2018. Apothesis.eap. https://apothesis.eap.gr/handle/repo/40547 
 
-* Δήμητρα Διδαγγέλου, Το χρώμα του αύριο, (2020)  https://www.psychografimata.com/to-chroma-tou-avrio/ 
+* Διδαγγέλου, Δήμητρα. “Το χρώμα του αύριο.” Ψυχογραφήματα. Ιανουάριος 28, 2020.  https://www.psychografimata.com/to-chroma-tou-avrio/ 
 
-* Δήμητρα Διδαγγέλου, Η συναισθησία ανά τους αιώνες, (2020)   https://www.psychografimata.com/i-sinesthisia-ana-tous-eones/ 
+* Διδαγγέλου, Δήμητρα. “Η συναισθησία ανά τους αιώνες.” Ψυχογραφήματα. Ιανουάριος 28, 2020.  https://www.psychografimata.com/i-sinesthisia-ana-tous-eones/ 
 
-* Ντερόπουλος Παναγιώτης, Η συναισθησία και η αισθητηριακή αντίληψη εικόνας, ήχου, μουσικής και κίνησης. (2018)  https://ikee.lib.auth.gr/record/297591/files/GRI-2018-21424.pdf
+* Ντερόπουλος, Παναγίωτης. 2018. “Η συναισθησία και η αισθητηριακή αντίληψη εικόνας, ήχου, μουσικής και κίνησης.” Μεταπτυχιακή Διατριβή. IKEE.   https://ikee.lib.auth.gr/record/297591/files/GRI-2018-21424.pdf 
 
-* KENNETH PEACOCK, Synesthetic Perception: Alexander Scriabin's Color Hearing, Source: Music Perception: An Interdisciplinary Journal Vol. 2, No. 4 (Summer, 1985), pp. 483-505 (23 pages)
-Stable URL: https://www.jstor.org/stable/40285315 
+* Peacock, Kenneth. “Synesthetic Perception: Alexander Scriabin's Color Hearing.” Source: Music Perception: An Interdisciplinary Journal Vol. 2, No. 4 (Summer 1985), pp. 483-505 (23 pages). Jstor.  https://www.jstor.org/stable/40285315 
 
-* William Moritz, The Dream of Color Music, And Machines That Made it Possible, Animation World Magazine, Issue 2.1, April 1997. https://www.awn.com/mag/issue2.1/articles/moritz2.1.html 
+* Moritz, William. “The Dream of Color Music, And Machines That Made it Possible.”  Animation World Magazine, Issue 2.1 (April 1997).   https://www.awn.com/mag/issue2.1/articles/moritz2.1.html 
 
-* ÖRG JEWANSKI,1 SEAN A. DAY,2 AND JAMIE WARD3, A Colorful Albino: The First Documented Case
-of Synaesthesia, by Georg Tobias Ludwig Sachs in 1812,Journal of the History of the Neurosciences, 2009.  http://www.daysyn.com/Jewanskietal2009.pdf     
+* Jörg Jewanski, Sean A. Day, Jamie Ward. “A Colorful Albino: The First Documented Case of Synaesthesia, by Georg Tobias Ludwig Sachs in 1812.” Journal of the History of the Neurosciences, Vol. 18, (July 2009). Taylor & Francis Online  https://doi.org/10.1080/09647040802431946      
 
-* JONATHAN W. BERNARD , Messiaen's Synaesthesia: The Correspondence between Color and Sound Structure in His Music, Source: Music Perception: An Interdisciplinary Journal , Fall, 1986, Vol 4, No. 1 (Fall, 1986), pp. 41-68, Stable URL: https://www.jstor.org/stable/40285351
+* Bernard Jonathan W. , “Messiaen's Synaesthesia: The Correspondence between Color and Sound Structure in His Music.” Music Perception: An Interdisciplinary Journal,  Vol 4, No. 1 (Fall, 1986), pp. 41-68, Jstor https://www.jstor.org/stable/40285351
 
-* Katharina Gsöllpointner, Syn-Aesthetics of Digital Art, Chapter · April 2016 https://www.researchgate.net/publication/301859084
+* Gsöllpointner, Katharina, “Syn-Aesthetics of Digital Art.” Digital Synesthesia. A Model for the Aesthetics of Digital Art (pp.11-28)  (April 2016). ResearchGate https://www.researchgate.net/publication/301859084   
 
 * https://el.wikipedia.org/wiki/%CE%91%CE%AF%CF%83%CE%B8%CE%B7%CF%83%CE%B7 
  
