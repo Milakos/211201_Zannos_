@@ -100,11 +100,11 @@
 
 Με την ίδια λογική καθορίζεται στην συνέχεια και το Reverb, όπου οι τιμές, διαχειρίζονται τον χρόνος αντήχησης, την ένταση, ένα low pass filter, το predelay, καθώς και την αναλογία του καθαρού σήματος με το σήμα που περνάει από το εφέ (dry/wet). Το Reverb το εισέρχεται σε ένα Bus για μελλοντική χρήση. 
 
-Στην συνέχεια, δημιουργούνται τρία διαφορετικά όργανα τύπου ακολουθιών Pbind και ορίζονται οι μεταβλητές συχνότητας με τυχαίους αριθμους κάθε φόρα με τις τιμές που ορίσαμε στην Prand. Οι μεταβλητές διάρκειας νότας επίσης ορίζονται με τον ίδιο τρόπο. Οι μεταβλητές ξεκουρδίσματος ορίζονται από τυχαίους αριθμούς μέσα στο φάσμα αριθμών που ορίζεται. Επίσης ορίζεται το συχνοτικό φάσμα και οι καμπάνες του LPF, οι μεταβλητές περιβάλλουσας attack, sustain, release, η ένταση, η στερεοφωνική εικόνα, και η ένωση με το εφέ προσομοίωσης δωματίου (Reverb). Τέλος δημιουργείται μια ακολουθία συνάρτησης Pfunc, η οποία παίρνει τις μεταβλητές που ορίσαμε και τις στέλνει στην Processing με το πρωτόκολλο OSC.  
+Στην συνέχεια, δημιουργούνται τρία διαφορετικά όργανα τύπου ακολουθιών Pbind και ορίζονται οι μεταβλητές συχνότητας με τυχαίους αριθμους, κάθε φόρα με τις τιμές που ορίσαμε στην Prand. Οι μεταβλητές διάρκειας νότας επίσης ορίζονται με τον ίδιο τρόπο. Οι μεταβλητές ξεκουρδίσματος ορίζονται από τυχαίους αριθμούς μέσα στο φάσμα αριθμών που ορίζεται. Επίσης ορίζεται το συχνοτικό φάσμα και οι καμπάνες του LPF, οι μεταβλητές περιβάλλουσας attack, sustain, release, η ένταση, η στερεοφωνική εικόνα, και η ένωση με το εφέ προσομοίωσης δωματίου (Reverb). Τέλος δημιουργείται μια ακολουθία συνάρτησης Pfunc, η οποία παίρνει τις μεταβλητές που ορίσαμε και τις στέλνει στην Processing με το πρωτόκολλο OSC.  
 
 Για το οπτικό μέρος της εργασίας χρησιμοποιήθηκε το περιβάλλον προγραμματισμού Processing όπου διαχειρίζεται ένα έργο του Wasilly Kadinsky με τεχνικές pixel rasterization. Το οπτικό αποτέλεσμα είναι μια τρισδιάστατη αποδόμηση των δύο διαστάσεων έργο του Kadinsky. 
 
-Τέλος με το προτόκολλο OSC, δίνεται η δυνατότητα ψηφιακής επικοινωνίας των δύο προγραμμάτων συνθέτωντας ένα ολοκληρομένο οπτικοακουστικό έργο. Με την επικοινωνία των δύο προγραμμάτων καταφέρνουμε να στέλνουμε μηνύματα απο το SuperCollider στην Processing όπου και αποθηκεύονται ως καινούριες μεταβλητές. Στην συνέχεια οι μεταβλητές αυτές χρησιμοποιούνται για την κίνηση των Pixel καθώς και για την εναλλαγή των χρωμάτων στο τελικό έργο. Αποτέλεσμα μια προσπάθεια αναπράστασης της συναισθησίας ως πάθηση καθώς και η εμβύθιση του χρήστη στο οπτικοακουστικό έργο ώς συναισθητικός άνθρωπος.        
+Τέλος, με το προτόκολλο OSC, δίνεται η δυνατότητα ψηφιακής επικοινωνίας των δύο προγραμμάτων συνθέτωντας ένα ολοκληρομένο οπτικοακουστικό έργο. Με την επικοινωνία των δύο προγραμμάτων καταφέρνουμε να στέλνουμε μηνύματα απο το SuperCollider στην Processing, όπου και αποθηκεύονται ως καινούριες μεταβλητές. Στην συνέχεια οι μεταβλητές αυτές χρησιμοποιούνται για την κίνηση των Pixel καθώς και για την εναλλαγή των χρωμάτων στο τελικό έργο. Αποτέλεσμα μια προσπάθεια αναπράστασης της συναισθησίας, καθώς και η εμβύθιση του χρήστη στο οπτικοακουστικό έργο ώς συναισθητικός άνθρωπος.        
 
 ## [Video](https://www.youtube.com/watch?v=BHG_cVyndEQ&ab_channel=milidzeckoG.)
 ## [Explanation of Code](https://www.youtube.com/watch?v=_nsAa1j8zjU&ab_channel=milidzeckoG.)
@@ -369,31 +369,30 @@ void oscEvent(OscMessage theOscMessage)
 
 # Βιβλιογραφία
 
-* Κουτσουράκη, Ε., Αναστασιάδης, Ι., Μπαλογιάννης, Σ.Ι. (2008), “Το φαινόμενο της συναισθησίας. Μια ανασκόπηση.”, Εγκέφαλος, (τόμος 45) Νο 1.  http://www.encephalos.gr/full/45-1-02g.htm 
+* Κουτσουράκη, Ευφροσύνη, Αναστασιάδης, Ιωάννης και Μπαλογιάννης, Σταύρος. “Το φαινόμενο της συναισθησίας. Μια ανασκόπηση.”, Εγκέφαλος τόμος 45,  Νο 1. (Ιανουάριος-Μάρτιος 2008). Encephalos Journal. http://www.encephalos.gr/full/45-1-02g.htm.
 
-* Καλπακίδη, Ελένη.  “Συναισθησία και τέχνη του φωτός: εικαστικές εφαρμογές φωτισμού και εγκαταστάσεις φωτός που προσομοιώνουν το αντιληπτικό φαινόμενο της συναισθησίας.” Σεπτέμβριος 30, 2018. Apothesis.eap. https://apothesis.eap.gr/handle/repo/40547 
+* Καλπακίδη, Ελένη. “Συναισθησία και τέχνη του φωτός: εικαστικές εφαρμογές φωτισμού και εγκαταστάσεις φωτός που προσομοιώνουν το αντιληπτικό φαινόμενο της συναισθησίας.” Διπλωματική εργασία. Ελληνικό Ανοικτό Πανεπιστήμιο, 2018. https://apothesis.eap.gr/handle/repo/40547. 
 
-* Διδαγγέλου, Δήμητρα. “Το χρώμα του αύριο.” Ψυχογραφήματα. Ιανουάριος 28, 2020.  https://www.psychografimata.com/to-chroma-tou-avrio/ 
+* Διδαγγέλου, Δήμητρα. “Το χρώμα του αύριο.” Ψυχογραφήματα. Ιανουάριος 28, 2020.  https://www.psychografimata.com/to-chroma-tou-avrio. 
 
-* Διδαγγέλου, Δήμητρα. “Η συναισθησία ανά τους αιώνες.” Ψυχογραφήματα. Ιανουάριος 28, 2020.  https://www.psychografimata.com/i-sinesthisia-ana-tous-eones/ 
+* Διδαγγέλου, Δήμητρα. “Η συναισθησία ανά τους αιώνες.” Ψυχογραφήματα. Ιανουάριος 28, 2020. https://www.psychografimata.com/i-sinesthisia-ana-tous-eones. 
 
-* Ντερόπουλος, Παναγίωτης. 2018. “Η συναισθησία και η αισθητηριακή αντίληψη εικόνας, ήχου, μουσικής και κίνησης.” Μεταπτυχιακή Διατριβή. IKEE.   https://ikee.lib.auth.gr/record/297591/files/GRI-2018-21424.pdf 
+* Ντερόπουλος, Παναγίωτης. “Η συναισθησία και η αισθητηριακή αντίληψη εικόνας, ήχου, μουσικής και κίνησης.” Μεταπτυχιακή Διατριβή. Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης, 2018. https://ikee.lib.auth.gr/record/297591/files/GRI-2018-21424.pdf. 
 
-* Peacock, Kenneth. “Synesthetic Perception: Alexander Scriabin's Color Hearing.” Source: Music Perception: An Interdisciplinary Journal Vol. 2, No. 4 (Summer 1985), pp. 483-505 (23 pages). Jstor.  https://www.jstor.org/stable/40285315 
+* Peacock, Kenneth. “Synesthetic Perception: Alexander Scriabin’s Color Hearing.” Music Perception: An Interdisciplinary Journal 2, no. 4 (1985): 483–505. https://doi.org/10.2307/40285315. 
 
-* Moritz, William. “The Dream of Color Music, And Machines That Made it Possible.”  Animation World Magazine, Issue 2.1 (April 1997).   https://www.awn.com/mag/issue2.1/articles/moritz2.1.html 
+* Moritz, William. “The Dream of Color Music, And Machines That Made it Possible.”  Animation World Magazine Issue 2.1 (April 1997). Animation World Network.  https://www.awn.com/mag/issue2.1/articles/moritz2.1.html.
 
-* Jörg Jewanski, Sean A. Day, Jamie Ward. “A Colorful Albino: The First Documented Case of Synaesthesia, by Georg Tobias Ludwig Sachs in 1812.” Journal of the History of the Neurosciences, Vol. 18, (July 2009). Taylor & Francis Online  https://doi.org/10.1080/09647040802431946      
+* Jörg Jewanski, Sean A. Day, Jamie Ward. “A Colorful Albino: The First Documented Case of Synaesthesia, by Georg Tobias Ludwig Sachs in 1812.” Journal of the History of the Neurosciences Vol. 18, (July 2009). Taylor & Francis Online  https://doi.org/10.1080/09647040802431946.     
 
-* Bernard Jonathan W. , “Messiaen's Synaesthesia: The Correspondence between Color and Sound Structure in His Music.” Music Perception: An Interdisciplinary Journal,  Vol 4, No. 1 (Fall, 1986), pp. 41-68, Jstor https://www.jstor.org/stable/40285351
+* Bernard, Jonathan W. “Messiaen’s Synaesthesia: The Correspondence between Color and Sound Structure in His Music.” Music Perception: An Interdisciplinary Journal 4, no. 1 (1986): 41–68. https://doi.org/10.2307/40285351.
 
-* Gsöllpointner, Katharina, “Syn-Aesthetics of Digital Art.” Digital Synesthesia. A Model for the Aesthetics of Digital Art (pp.11-28)  (April 2016). ResearchGate https://www.researchgate.net/publication/301859084   
+* Gsöllpointner, Katharina. "Syn-Aesthetics of Digital Art" In Digital Synesthesia: A Model for the Aesthetics of Digital Art edited by Katharina Gsöllpointner, Ruth Schnell and Romana Karla Schuler, 10-28. Berlin, Boston: De Gruyter, (2016). https://doi.org/10.1515/9783110459937-003.
 
-* https://el.wikipedia.org/wiki/%CE%91%CE%AF%CF%83%CE%B8%CE%B7%CF%83%CE%B7 
  
 ## Ηλεκτρονική διαδικτυογραφία
 
-*  Wikimedia Foundation. “Αίσθηση.” Βικιπαίδεια. Σεπτέμβριος 28, 2021. https://el.wikipedia.org/wiki/%CE%91%CE%AF%CF%83%CE%B8%CE%B7%CF%83%CE%B7 
+* “Αίσθηση,” Βικιπαίδεια, τελευταία τροποποίηση Σεπτέμβριος 28, 2021, https://el.wikipedia.org/wiki/%CE%91%CE%AF%CF%83%CE%B8%CE%B7%CF%83%CE%B7.
 
 * The Harmonagon Project. “The Geometry of Music.” Harmonagon. Μάιος 23, 2017. Εκπαιδευτικό βίντεο, 2:41. https://www.youtube.com/watch?v=ZWzwb4BumIk&t=5s 
 
